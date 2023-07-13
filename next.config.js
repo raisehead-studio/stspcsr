@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const isGithubActions = process.env.GITHUB_ACTIONS || false;
-const repo = "stspcsr_host";
 let assetPrefix = "";
 let basePath = "/";
 
