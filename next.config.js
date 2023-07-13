@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 
-const repo = "stspcsr_host/";
+const repo = "stspcsr_host";
 const assetPrefix = `/${repo}/`;
 const basePath = `/${repo}`;
 
