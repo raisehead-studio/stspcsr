@@ -1,4 +1,9 @@
 /** @type {import('next').NextConfig} */
+
+const repo = "stspcsr_host/";
+const assetPrefix = `/${repo}/`;
+const basePath = `/${repo}`;
+
 const nextConfig = {
   images: {
     remotePatterns: [
@@ -35,6 +40,8 @@ const nextConfig = {
     ],
   },
   output: "export",
+  assetPrefix: assetPrefix,
+  basePath: basePath,
 };
 
 module.exports = nextConfig;
