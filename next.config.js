@@ -4,12 +4,7 @@ let assetPrefix = "";
 let basePath = "/";
 
 if (isGithubActions) {
-  const repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, "");
-
-  console.log("---------");
-  console.log("GITHUB_REPOSITORY", process.env.GITHUB_REPOSITORY);
-  console.log("GITHUB_ACTIONS", process.env.GITHUB_ACTIONS);
-  console.log("---------");
+  const repo = "stspcsr_host";
 
   assetPrefix = `/${repo}/`;
   basePath = `/${repo}`;
