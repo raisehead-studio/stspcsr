@@ -9,6 +9,12 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
+        hostname: "**",
+        port: "",
+        pathname: "**",
+      },
+      {
+        protocol: "https",
         hostname: "www.stspcsr.com.tw",
         port: "",
         pathname: "/images/home_logo/**",
