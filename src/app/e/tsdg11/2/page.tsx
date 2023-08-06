@@ -58,11 +58,11 @@ export default function CSRCompanyListPage() {
                   fill={true}
                   alt="profile photo"
                 />
-                <div className="link_container">
-                  <p>相關連結:</p>
-                  <Link href="https://www.stsp.gov.tw/web/indexGroups?frontTarget=DEFAULT">
-                    南部科學園區全球資訊網
-                  </Link>
+                <div>
+                  <p>
+                    Opening of New Business Circle at Management 1 Zone at the
+                    KSP that offers more convenient life amenities
+                  </p>
                 </div>
               </div>
               <div className="photo_container">
@@ -72,22 +72,52 @@ export default function CSRCompanyListPage() {
                   alt="profile photo"
                 />
                 <div>
-                  <p>南科健康生活館健身房</p>
+                  <p>Owin 1 Fitness Center</p>
                 </div>
               </div>
             </div>
-
+            <div className="link_container">
+              <p>Related link:</p>
+              <Link href="https://www.stsp.gov.tw/web/indexGroups?frontTarget=DEFAULT">
+                STSP Official Website
+              </Link>
+            </div>
             <div className="page_description">
-              <h4>2.藝術文化與敦親活動</h4>
+              <h4>2.Art and culture events and good-neighborly activities</h4>
               <p>
-                &nbsp;&nbsp;&nbsp;&nbsp;南科管理局積極蓄積園區藝文軟實力，並致力於推動藝文活動和音樂會，舉辦藝術展覽，為園區提供豐富多元的文化體驗。同時，敦親活動也是園區重要的一部分，透過各種活動，增進人與人之間的感情。透過藝術文化和敦親活動的結合，促進居民的互動和融合，增進園區生活品質，打造一個充滿活力和魅力的南科園區。
+                STSP Bureau actively accumulates the soft power of art and
+                culture, and is devoted to the promotion of art and culture
+                events and concerts and organizing art exhibitions to provide
+                rich and diverse cultural experience in the park. At the same
+                time, good-neighborly activities are also an important part in
+                the science park. Through various activities, the bond between
+                people can be enhanced. By combining the art and culture events
+                and the good-neighborly activities, the interaction and bond
+                with the residents can be promoted, which can further improve
+                the quality of life in the park area, creating a vibrant and
+                charming STSP.
               </p>
-              <h4>南科新港社地方文化館展演</h4>
+              <h4>Exhibitions in Hsing-Kuang Hsier Local Culture Hall</h4>
               <p>
-                &nbsp;&nbsp;&nbsp;&nbsp;南科新港社地方文化館是一棟宗教與文化合璧的建築組合，2樓為廟宇，1樓為文化館，以展示臺南市在地(新市、善化、安定區及周邊鄰近地區)個人藝術家、藝術學會會員聯展、學校美術班成果作品為主。
+                Hsing-Kuang Hsier Local Culture Hall is a structure with the
+                combination of religion and culture, with the second floor being
+                the temple and the first floor being the Culture Hall for the
+                exhibition of artworks from local individual artists (Xinshi,
+                Shanhua and Anding Districts and the surrounding areas), joint
+                exhibition of art society members, and works for art class at
+                schools.
               </p>
               <p>
-                &nbsp;&nbsp;&nbsp;&nbsp;2022年疫情逐漸解封，文化館在配合政府防疫政策前提下開始恢復舉辦展覽之開幕茶會活動，提供觀賞者安心的觀展環境，共計舉辦7場展演，吸引眾多藝術愛好者闔家參觀與交流，十分適合親子同遊，使南科不僅為高科技園區，亦為一蘊含豐沛文化、自然生態、平衡科技與人文發展的園區。
+                As the epidemic condition eased in 2022, the Xingan Community
+                Culture Museum started to resume holding the opening tea party
+                of the exhibitions under the premise of cooperating with the
+                government’s epidemic prevention policy. A total of 7
+                exhibitions and performances were held, attracting many art
+                lovers and families to visit and have exchanges. This is
+                especially a place suitable for parents and children to travel
+                together, making STSP not only a high-tech park but also a park
+                with rich culture and natural ecology, namely a place with
+                balanced development of technology and humanities.
               </p>
             </div>
             <div className="photo_container">

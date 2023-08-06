@@ -1,7 +1,4 @@
 "use client";
-import Image from "next/image";
-import Link from "next/link";
-
 import Header from "@/component/Header";
 import Footer from "@/component/Footer";
 import "./layout.scss";
@@ -15,8 +12,10 @@ export default function RootLayout({
     <html lang="zh-TW">
       <body>
         <Header />
-        <main>{children}</main>
-        <Footer />
+        <main>
+          {children}
+          <Footer />
+        </main>
       </body>
     </html>
   );
