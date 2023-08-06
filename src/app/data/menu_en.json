@@ -1,0 +1,215 @@
+[
+  {
+    "title": "Home",
+    "path": "/"
+  },
+  {
+    "title": "南科永續發展",
+    "sub": [
+      {
+        "title": "Message from Director-General",
+        "path": "/message_director"
+      },
+      {
+        "title": "About STSP",
+        "path": "/about_stsp"
+      },
+      {
+        "title": "Future Outlook",
+        "path": "/vision_and_blueprint"
+      },
+      {
+        "title": "利害關係人溝通",
+        "path": "/stakeholder_communication"
+      },
+      {
+        "title": "2022永續管理績效",
+        "path": "/performance"
+      }
+    ]
+  },
+  {
+    "title": "2022 VDR",
+    "sub": [
+      {
+        "title": "營造友善環境，重視四生價值",
+        "path": "/e",
+        "sub": [
+          {
+            "title": "T-SG11",
+            "path": "/e/tsg11",
+            "sub": [
+              {
+                "title": "建構穩定且便捷的交通系統",
+                "path": "/tsg11/1"
+              },
+              {
+                "title": "健全園區機能，樂活藝文南科",
+                "path": "/tsg11/2"
+              },
+              {
+                "title": "低碳生態社區，建築與環境共生共利",
+                "path": "/tsg11/3"
+              },
+              {
+                "title": "生態保護意識擴散",
+                "path": "/tsg11/4"
+              }
+            ]
+          },
+          {
+            "title": "T-SG13",
+            "sub": [
+              {
+                "title": "智慧防災應變體系，提高園區韌性",
+                "path": "/perft-ormance"
+              },
+              {
+                "title": "溫室氣體管理",
+                "path": "/perft-ormance"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "開創園區動能，壯大產業聚落",
+        "sub": [
+          {
+            "title": "T-SDG1",
+            "sub": [
+              {
+                "title": "協助推動廠商研發創新，扶植新創團隊，積蓄園區技術創新動能",
+                "path": "/perft-ormance"
+              },
+              {
+                "title": "擴大園區領域，帶動城市轉型，促進地方就業",
+                "path": "/perft-ormance"
+              }
+            ]
+          },
+          {
+            "title": "T-SDG 4、8",
+            "sub": [
+              {
+                "title": "關鍵培育，降低產學落差",
+                "path": "/"
+              },
+              {
+                "title": "推動技術升級，壯大產業聚落",
+                "path": "/"
+              },
+              {
+                "title": "建構安全且友善的職場環境",
+                "path": "/"
+              }
+            ]
+          },
+          {
+            "title": "T-SDG17",
+            "sub": [
+              {
+                "title": "國內外交流與產業連結",
+                "path": "/"
+              },
+              {
+                "title": "攜手參與國際大展",
+                "path": "/"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "精實優質服務，確保永續營運",
+        "sub": [
+          {
+            "title": "T-SDG6、12",
+            "sub": [
+              {
+                "title": "實施環保審查，廢污水100%納管處理",
+                "path": "/perft-ormance"
+              },
+              {
+                "title": "降低園區用水強度，提升供水穩定",
+                "path": "/perft-ormance"
+              },
+              {
+                "title": "廢棄物妥善處理",
+                "path": "/perft-ormance"
+              }
+            ]
+          },
+          {
+            "title": "T-SDG7",
+            "sub": [
+              {
+                "title": "建置再生能源系統，穩定園區供電",
+                "path": "/perft-ormance"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "展望外來",
+        "path": "/"
+      }
+    ]
+  },
+  {
+    "title": "ESG專區",
+    "sub": [
+      {
+        "title": "園區廠商專區",
+        "path": "/"
+      },
+      {
+        "title": "永續資料庫",
+        "path": "/"
+      },
+      {
+        "title": "ESG學習專區",
+        "sub": [
+          {
+            "title": "如何撰寫報告書",
+            "path": "/"
+          },
+          {
+            "title": "GRI準則2021改版",
+            "path": "/"
+          },
+          {
+            "title": "公司治理3.0-永續發展藍圖",
+            "path": "/"
+          },
+          {
+            "title": "上市櫃公司永續發展行動方案",
+            "path": "/"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Interactive",
+    "sub": [
+      {
+        "title": "影音專區",
+        "path": "/"
+      },
+      {
+        "title": "報告書下載",
+        "path": "/"
+      },
+      {
+        "title": "小遊戲",
+        "path": "/"
+      },
+      {
+        "title": "好站相連",
+        "path": "/"
+      }
+    ]
+  }
+]

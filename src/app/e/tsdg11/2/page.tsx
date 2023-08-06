@@ -1,0 +1,323 @@
+"use client";
+import Breadcrumb from "@/component/Breadcrumb";
+import SideMenu from "@/component/SideMenu";
+import { useSearchParams } from "next/navigation";
+import Image from "next/image";
+import Link from "next/link";
+
+import "@/app/layout.scss";
+import "./styles.scss";
+
+export default function CSRCompanyListPage() {
+  const searchParams = useSearchParams();
+  const lang = searchParams.get("lang");
+  if (lang) {
+    return (
+      <div className="page_layout">
+        <div className="page_content">
+          <div className="page_header">
+            <strong>
+              Complete the park functions to create a LOHAS art and culture in
+              STSP
+            </strong>
+            <Breadcrumb />
+          </div>
+          <div className="photo_container">
+            <Image
+              src={"/images/e/tsdg11/2/zh/photo1.png"}
+              fill={true}
+              alt="profile photo"
+            />
+          </div>
+          <div>
+            <div className="page_description">
+              <h4>
+                1. Introduction of industrial and commercial life service
+                industries
+              </h4>
+              <p>
+                The Bureau provides park manufacturers with faster and more
+                convenient services. The 12 categories of industrial and
+                commercial services in the science park include banking and
+                finance, post office, securities, travel agency, accounting,
+                law, equipment service providers, electronic material agency and
+                sales, consultancy, telecommunications, inspection and
+                verification and customs clearance services to address the needs
+                of park manufacturers. STSP Bureau aims at creating a
+                high-quality environment with high efficiency, safety, health,
+                and comfort to attract industries and talents. Life service
+                industries such as catering, shopping, exercise, leisure,
+                childcare, and after-school classes are introduced. Please check
+                the official website of STSP Bureau for detailed information.
+              </p>
+            </div>
+            <div className="photo_row_container">
+              <div className="photo_container">
+                <Image
+                  src={"/images/e/tsdg11/2/zh/photo2.png"}
+                  fill={true}
+                  alt="profile photo"
+                />
+                <div className="link_container">
+                  <p>相關連結:</p>
+                  <Link href="https://www.stsp.gov.tw/web/indexGroups?frontTarget=DEFAULT">
+                    南部科學園區全球資訊網
+                  </Link>
+                </div>
+              </div>
+              <div className="photo_container">
+                <Image
+                  src={"/images/e/tsdg11/2/zh/photo3.png"}
+                  fill={true}
+                  alt="profile photo"
+                />
+                <div>
+                  <p>南科健康生活館健身房</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="page_description">
+              <h4>2.藝術文化與敦親活動</h4>
+              <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;南科管理局積極蓄積園區藝文軟實力，並致力於推動藝文活動和音樂會，舉辦藝術展覽，為園區提供豐富多元的文化體驗。同時，敦親活動也是園區重要的一部分，透過各種活動，增進人與人之間的感情。透過藝術文化和敦親活動的結合，促進居民的互動和融合，增進園區生活品質，打造一個充滿活力和魅力的南科園區。
+              </p>
+              <h4>南科新港社地方文化館展演</h4>
+              <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;南科新港社地方文化館是一棟宗教與文化合璧的建築組合，2樓為廟宇，1樓為文化館，以展示臺南市在地(新市、善化、安定區及周邊鄰近地區)個人藝術家、藝術學會會員聯展、學校美術班成果作品為主。
+              </p>
+              <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;2022年疫情逐漸解封，文化館在配合政府防疫政策前提下開始恢復舉辦展覽之開幕茶會活動，提供觀賞者安心的觀展環境，共計舉辦7場展演，吸引眾多藝術愛好者闔家參觀與交流，十分適合親子同遊，使南科不僅為高科技園區，亦為一蘊含豐沛文化、自然生態、平衡科技與人文發展的園區。
+              </p>
+            </div>
+            <div className="photo_container">
+              <Image
+                src={"/images/e/tsdg11/2/zh/photo4.png"}
+                fill={true}
+                alt="profile photo"
+              />
+            </div>
+            <div className="page_description">
+              <h4>運動在南科</h4>
+              <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;南科管理局鼓勵園區運動風氣，2022年持續辦理「運動在南科」系列活動，包含千人健走、線上健走、南科盃球類競賽等活動，再次為園區掀起一股運動風潮。其中千人健走五度邀請羽球天后戴資穎擔任代言人；球類競賽辦理共計3,289名球員、166家廠商一同參與，展現出南科的健康活力。
+              </p>
+            </div>
+            <div className="photo_container">
+              <Image
+                src={"/images/e/tsdg11/2/zh/photo5.png"}
+                fill={true}
+                alt="profile photo"
+              />
+            </div>
+            <div className="page_description">
+              <h4>暮春藝文季</h4>
+              <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;每年約3、4月春暖花開時，本局辦理4場周末音樂藝文演出，以「互動、有趣、玩音樂」的方式，紓緩日常生活壓力，提升南科生活素質，並增進園區從業人員情感交流。
+              </p>
+            </div>
+            <div className="page_description">
+              <h4>2022耶誕在南科</h4>
+              <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;為迎接耶誕節及新年的來臨，南科管理局於12月23日晚上在璞馨公園舉辦「2022耶誕在南科」耶誕晚會活動。而園區歲末年終燈飾亦邀請台積電、聯電等17家廠商，共同於園區各個重要路口一起參與佈置。期許南科大家庭的每一份子在新的一年裡都能心想事成、迎向幸福2023！
+              </p>
+            </div>
+            <div className="photo_row_container">
+              <div className="photo_container">
+                <Image
+                  src={"/images/e/tsdg11/2/zh/photo6.png"}
+                  fill={true}
+                  alt="profile photo"
+                />
+              </div>
+              <div className="photo_container">
+                <Image
+                  src={"/images/e/tsdg11/2/zh/photo7.png"}
+                  fill={true}
+                  alt="profile photo"
+                />
+              </div>
+            </div>
+            <div className="page_description">
+              <h4>愛心不中斷</h4>
+              <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;南科管理局自2015年底起攜手南科扶輪社、台灣世界展望會，募集愛心捐款，共同推動「南科愛心月」活動，以「在地關懷，讓愛紮根」為宗旨，匯聚南科人的愛心，為周邊地區弱勢家庭提供急難醫療等協助。迄今所舉辦八屆的愛心月活動，累計募得款項共計約新臺幣1,917萬元。
+              </p>
+              <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;截至2022年底止，計有臺南園區所處之新市、善化、安定三區及高雄園區所在之路竹、岡山、永安三區周邊以及大臺南地區逾1,279戶弱勢家庭、4,089人次受惠，發放愛心捐款金額累計逾1,520萬元。
+              </p>
+            </div>
+            <div className="photo_container">
+              <Image
+                src={"/images/e/tsdg11/2/zh/photo8.png"}
+                fill={true}
+                alt="profile photo"
+              />
+            </div>
+            <div className="page_description">
+              <h4>3.同遊史前館</h4>
+              <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;國立臺灣史前文化博物館南科考古館(簡稱南科考古館)位於南科管理局行政大樓旁，獨特的建物外觀，蘊藏800多萬件考古文物，均是隨著南科園區開展至今所發掘出的先人遺跡，體現出這片土地蘊涵深厚的人文工藝生活脈絡，舉辦各式活動、推廣教育及特展等，讓大家看見南科與眾不同的當代史前風景，一同來認識並珍惜難得的人文園區。
+              </p>
+            </div>
+            <div className="photo_container">
+              <Image
+                src={"/images/e/tsdg11/2/zh/photo9.png"}
+                fill={true}
+                alt="profile photo"
+              />
+            </div>
+          </div>
+        </div>
+        <div className="page_sidemenu">
+          <SideMenu />
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="page_layout">
+      <div className="page_content">
+        <div className="page_header">
+          <strong>健全園區機能，樂活藝文南科</strong>
+          <Breadcrumb />
+        </div>
+        <div className="photo_container">
+          <Image
+            src={"/images/e/tsdg11/2/zh/photo1.png"}
+            fill={true}
+            alt="profile photo"
+          />
+        </div>
+        <div>
+          <div className="page_description">
+            <h4>1.引進工商生活服務業</h4>
+            <p>
+              &nbsp;&nbsp;&nbsp;&nbsp;為提供園區廠商更迅速及便捷的服務，園區內工商服務業計有銀行金融、郵局、證券、旅行社、會計、法律、設備服務商、電子材料代理及販售、顧問業、電信、檢測驗證及通關服務等12種不同業別，提供園區廠商完善的服務，期許將科學園區打造為高效率、安全、健康、舒適、吸引產業及人才的優質環境，並引進飲食、購物、運動、休閒、托育、安親等生活服務業，詳細資訊可至南科管理局官網查看。
+            </p>
+          </div>
+          <div className="photo_row_container">
+            <div className="photo_container">
+              <Image
+                src={"/images/e/tsdg11/2/zh/photo2.png"}
+                fill={true}
+                alt="profile photo"
+              />
+              <div className="link_container">
+                <p>相關連結:</p>
+                <Link href="https://www.stsp.gov.tw/web/indexGroups?frontTarget=DEFAULT">
+                  南部科學園區全球資訊網
+                </Link>
+              </div>
+            </div>
+            <div className="photo_container">
+              <Image
+                src={"/images/e/tsdg11/2/zh/photo3.png"}
+                fill={true}
+                alt="profile photo"
+              />
+              <div>
+                <p>南科健康生活館健身房</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="page_description">
+            <h4>2.藝術文化與敦親活動</h4>
+            <p>
+              &nbsp;&nbsp;&nbsp;&nbsp;南科管理局積極蓄積園區藝文軟實力，並致力於推動藝文活動和音樂會，舉辦藝術展覽，為園區提供豐富多元的文化體驗。同時，敦親活動也是園區重要的一部分，透過各種活動，增進人與人之間的感情。透過藝術文化和敦親活動的結合，促進居民的互動和融合，增進園區生活品質，打造一個充滿活力和魅力的南科園區。
+            </p>
+            <h4>南科新港社地方文化館展演</h4>
+            <p>
+              &nbsp;&nbsp;&nbsp;&nbsp;南科新港社地方文化館是一棟宗教與文化合璧的建築組合，2樓為廟宇，1樓為文化館，以展示臺南市在地(新市、善化、安定區及周邊鄰近地區)個人藝術家、藝術學會會員聯展、學校美術班成果作品為主。
+            </p>
+            <p>
+              &nbsp;&nbsp;&nbsp;&nbsp;2022年疫情逐漸解封，文化館在配合政府防疫政策前提下開始恢復舉辦展覽之開幕茶會活動，提供觀賞者安心的觀展環境，共計舉辦7場展演，吸引眾多藝術愛好者闔家參觀與交流，十分適合親子同遊，使南科不僅為高科技園區，亦為一蘊含豐沛文化、自然生態、平衡科技與人文發展的園區。
+            </p>
+          </div>
+          <div className="photo_container">
+            <Image
+              src={"/images/e/tsdg11/2/zh/photo4.png"}
+              fill={true}
+              alt="profile photo"
+            />
+          </div>
+          <div className="page_description">
+            <h4>運動在南科</h4>
+            <p>
+              &nbsp;&nbsp;&nbsp;&nbsp;南科管理局鼓勵園區運動風氣，2022年持續辦理「運動在南科」系列活動，包含千人健走、線上健走、南科盃球類競賽等活動，再次為園區掀起一股運動風潮。其中千人健走五度邀請羽球天后戴資穎擔任代言人；球類競賽辦理共計3,289名球員、166家廠商一同參與，展現出南科的健康活力。
+            </p>
+          </div>
+          <div className="photo_container">
+            <Image
+              src={"/images/e/tsdg11/2/zh/photo5.png"}
+              fill={true}
+              alt="profile photo"
+            />
+          </div>
+          <div className="page_description">
+            <h4>暮春藝文季</h4>
+            <p>
+              &nbsp;&nbsp;&nbsp;&nbsp;每年約3、4月春暖花開時，本局辦理4場周末音樂藝文演出，以「互動、有趣、玩音樂」的方式，紓緩日常生活壓力，提升南科生活素質，並增進園區從業人員情感交流。
+            </p>
+          </div>
+          <div className="page_description">
+            <h4>2022耶誕在南科</h4>
+            <p>
+              &nbsp;&nbsp;&nbsp;&nbsp;為迎接耶誕節及新年的來臨，南科管理局於12月23日晚上在璞馨公園舉辦「2022耶誕在南科」耶誕晚會活動。而園區歲末年終燈飾亦邀請台積電、聯電等17家廠商，共同於園區各個重要路口一起參與佈置。期許南科大家庭的每一份子在新的一年裡都能心想事成、迎向幸福2023！
+            </p>
+          </div>
+          <div className="photo_row_container">
+            <div className="photo_container">
+              <Image
+                src={"/images/e/tsdg11/2/zh/photo6.png"}
+                fill={true}
+                alt="profile photo"
+              />
+            </div>
+            <div className="photo_container">
+              <Image
+                src={"/images/e/tsdg11/2/zh/photo7.png"}
+                fill={true}
+                alt="profile photo"
+              />
+            </div>
+          </div>
+          <div className="page_description">
+            <h4>愛心不中斷</h4>
+            <p>
+              &nbsp;&nbsp;&nbsp;&nbsp;南科管理局自2015年底起攜手南科扶輪社、台灣世界展望會，募集愛心捐款，共同推動「南科愛心月」活動，以「在地關懷，讓愛紮根」為宗旨，匯聚南科人的愛心，為周邊地區弱勢家庭提供急難醫療等協助。迄今所舉辦八屆的愛心月活動，累計募得款項共計約新臺幣1,917萬元。
+            </p>
+            <p>
+              &nbsp;&nbsp;&nbsp;&nbsp;截至2022年底止，計有臺南園區所處之新市、善化、安定三區及高雄園區所在之路竹、岡山、永安三區周邊以及大臺南地區逾1,279戶弱勢家庭、4,089人次受惠，發放愛心捐款金額累計逾1,520萬元。
+            </p>
+          </div>
+          <div className="photo_container">
+            <Image
+              src={"/images/e/tsdg11/2/zh/photo8.png"}
+              fill={true}
+              alt="profile photo"
+            />
+          </div>
+          <div className="page_description">
+            <h4>3.同遊史前館</h4>
+            <p>
+              &nbsp;&nbsp;&nbsp;&nbsp;國立臺灣史前文化博物館南科考古館(簡稱南科考古館)位於南科管理局行政大樓旁，獨特的建物外觀，蘊藏800多萬件考古文物，均是隨著南科園區開展至今所發掘出的先人遺跡，體現出這片土地蘊涵深厚的人文工藝生活脈絡，舉辦各式活動、推廣教育及特展等，讓大家看見南科與眾不同的當代史前風景，一同來認識並珍惜難得的人文園區。
+            </p>
+          </div>
+          <div className="photo_container">
+            <Image
+              src={"/images/e/tsdg11/2/zh/photo9.png"}
+              fill={true}
+              alt="profile photo"
+            />
+          </div>
+        </div>
+      </div>
+      <div className="page_sidemenu">
+        <SideMenu />
+      </div>
+    </div>
+  );
+}

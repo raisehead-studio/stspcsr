@@ -1,0 +1,41 @@
+.performance_table {
+  padding: 20px 0px;
+  > tbody {
+    > tr {
+      > td {
+        > strong {
+          font-size: 16px;
+          font-weight: 700;
+        }
+
+        > span {
+          font-size: 12px;
+        }
+
+        font-size: 14px;
+        color: #999;
+        line-height: 1.6;
+        text-align: center;
+        border: 1px solid #ddd;
+        padding: 15px;
+        > div {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          width: 100%;
+          gap: 2px;
+          > div {
+            border: 1px solid #ddd;
+            padding: 15px;
+            width: 100%;
+          }
+        }
+      }
+
+      .no_border_td {
+        border: none;
+        padding: 0px;
+      }
+    }
+  }
+}

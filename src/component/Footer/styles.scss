@@ -1,0 +1,108 @@
+.footer {
+  background: radial-gradient(
+    6259.3% 157.59% at 26.67% 146.63%,
+    #f8f6e8 21.91%,
+    #90c9b6 44.35%,
+    #5aae93 100%
+  );
+  width: 100vw;
+  min-height: 200px;
+  // background-image: url("https://www.stspcsr.com.tw/images/home/footer.png");
+  // background-repeat: no-repeat;
+  display: grid;
+  grid-template-columns: 260px 260px 260px 260px;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "container1 container2 container3 container4"
+    "container5 container5 container5 container5";
+  gap: 0px;
+  justify-content: center;
+
+  > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    > h4 {
+      margin: 0px;
+    }
+    > div {
+      > p {
+        margin: 0px;
+      }
+    }
+  }
+
+  .container1 {
+    grid-area: container1;
+    flex-direction: column;
+  }
+
+  .container2 {
+    grid-area: container2;
+    gap: 10px;
+    p {
+      margin: 0px;
+      color: #005752;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .name {
+      font-size: 20px;
+    }
+
+    .address {
+      font-size: 13px;
+      font-weight: 400;
+    }
+  }
+
+  .container3 {
+    grid-area: container3;
+    gap: 10px;
+    p {
+      margin: 0px;
+      color: #005752;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .name {
+      font-size: 20px;
+    }
+
+    .address {
+      font-size: 13px;
+      font-weight: 400;
+    }
+  }
+
+  .container4 {
+    grid-area: container4;
+    justify-content: flex-start;
+    width: 100%;
+    > ul {
+      width: 100%;
+
+      > li {
+        list-style: none;
+        padding: 6px 0px;
+        text-transform: uppercase;
+        border-bottom: 1px solid #000;
+        width: 100%;
+        > a {
+          color: #ffffff;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .container5 {
+    grid-area: container5;
+    margin: 10px 0px;
+    > h4 {
+      text-align: center;
+    }
+  }
+}

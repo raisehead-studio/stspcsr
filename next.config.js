@@ -1,16 +1,21 @@
 /** @type {import('next').NextConfig} */
-const isGithubActions = process.env.GITHUB_ACTIONS || false;
-let assetPrefix = "";
-let basePath = "/";
+// const isGithubActions = process.env.GITHUB_ACTIONS || false;
+// let assetPrefix = "";
+// let basePath = "/";
 
-if (isGithubActions) {
-  const repo = "stspcsr_host";
+// if (isGithubActions) {
+//   const repo = "stspcsr_host";
 
-  assetPrefix = `/${repo}/`;
-  basePath = `/${repo}`;
-}
+//   assetPrefix = `/${repo}/`;
+//   basePath = `/${repo}`;
+// }
 
 const nextConfig = {
+  i18n: {
+    locales: ["zh-TW", "en"],
+    defaultLocale: "zh-TW",
+    localeDetection: false,
+  },
   images: {
     remotePatterns: [
       {
@@ -51,9 +56,9 @@ const nextConfig = {
       },
     ],
   },
-  output: "export",
-  assetPrefix: assetPrefix,
-  basePath: basePath,
+  // output: "export",
+  // assetPrefix: assetPrefix,
+  // basePath: basePath,
 };
 
 module.exports = nextConfig;
