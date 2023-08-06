@@ -24,7 +24,7 @@ export default function CSRCompanyListPage() {
           </div>
           <div className="photo_container">
             <Image
-              src={"/images/e/tsdg11/2/zh/photo1.png"}
+              src={"/images/e/tsdg11/2/en/photo1.png"}
               fill={true}
               alt="profile photo"
             />
@@ -54,7 +54,7 @@ export default function CSRCompanyListPage() {
             <div className="photo_row_container">
               <div className="photo_container">
                 <Image
-                  src={"/images/e/tsdg11/2/zh/photo2.png"}
+                  src={"/images/e/tsdg11/2/en/photo2.png"}
                   fill={true}
                   alt="profile photo"
                 />
@@ -67,7 +67,7 @@ export default function CSRCompanyListPage() {
               </div>
               <div className="photo_container">
                 <Image
-                  src={"/images/e/tsdg11/2/zh/photo3.png"}
+                  src={"/images/e/tsdg11/2/en/photo3.png"}
                   fill={true}
                   alt="profile photo"
                 />
@@ -122,77 +122,121 @@ export default function CSRCompanyListPage() {
             </div>
             <div className="photo_container">
               <Image
-                src={"/images/e/tsdg11/2/zh/photo4.png"}
+                src={"/images/e/tsdg11/2/en/photo4.png"}
                 fill={true}
                 alt="profile photo"
               />
             </div>
             <div className="page_description">
-              <h4>運動在南科</h4>
+              <h4>Sports Events in the STSP</h4>
               <p>
-                &nbsp;&nbsp;&nbsp;&nbsp;南科管理局鼓勵園區運動風氣，2022年持續辦理「運動在南科」系列活動，包含千人健走、線上健走、南科盃球類競賽等活動，再次為園區掀起一股運動風潮。其中千人健走五度邀請羽球天后戴資穎擔任代言人；球類競賽辦理共計3,289名球員、166家廠商一同參與，展現出南科的健康活力。
+                STSPB promotes exercise in the science park. In 2022, the Bureau
+                continued to organize the Exercise at STSP, the sports events
+                include the Thousand People Fitness Walking, online hiking, STSP
+                CUP ball games and so on, once again setting off a trend of
+                exercise in the science park. Among them, the fitness walking
+                event invited the professional badminton player, Tai Tzu-Ying to
+                be the spokesperson for the fifth time. The ball games were
+                participated by 3,289 players from 166 manufacturers, showing
+                the health and vitality of STSP.
               </p>
             </div>
             <div className="photo_container">
               <Image
-                src={"/images/e/tsdg11/2/zh/photo5.png"}
+                src={"/images/e/tsdg11/2/en/photo5.png"}
                 fill={true}
                 alt="profile photo"
               />
             </div>
-            <div className="page_description">
-              <h4>暮春藝文季</h4>
-              <p>
-                &nbsp;&nbsp;&nbsp;&nbsp;每年約3、4月春暖花開時，本局辦理4場周末音樂藝文演出，以「互動、有趣、玩音樂」的方式，紓緩日常生活壓力，提升南科生活素質，並增進園區從業人員情感交流。
-              </p>
-            </div>
-            <div className="page_description">
-              <h4>2022耶誕在南科</h4>
-              <p>
-                &nbsp;&nbsp;&nbsp;&nbsp;為迎接耶誕節及新年的來臨，南科管理局於12月23日晚上在璞馨公園舉辦「2022耶誕在南科」耶誕晚會活動。而園區歲末年終燈飾亦邀請台積電、聯電等17家廠商，共同於園區各個重要路口一起參與佈置。期許南科大家庭的每一份子在新的一年裡都能心想事成、迎向幸福2023！
-              </p>
-            </div>
-            <div className="photo_row_container">
-              <div className="photo_container">
-                <Image
-                  src={"/images/e/tsdg11/2/zh/photo6.png"}
-                  fill={true}
-                  alt="profile photo"
-                />
+            <div style={{ display: "flex", gap: "20px" }}>
+              <div className="page_description">
+                <h4>STSP Late Spring Art Event</h4>
+                <p>
+                  Every March and April when spring comes and flowers bloom,
+                  STSPB will organize concerts combined with art and culture
+                  element for 4 weekends, allowing park employees to relieve
+                  their stress of daily life, improve the quality of life at
+                  STSP, and enhancing the exchanges and bond among employees in
+                  an interactive, fun, and musical way.
+                </p>
+                <div className="photo_container">
+                  <Image
+                    src={"/images/e/tsdg11/2/en/photo6.png"}
+                    fill={true}
+                    alt="profile photo"
+                  />
+                </div>
               </div>
-              <div className="photo_container">
-                <Image
-                  src={"/images/e/tsdg11/2/zh/photo7.png"}
-                  fill={true}
-                  alt="profile photo"
-                />
+              <div className="page_description">
+                <h4>Christmas at STSP</h4>
+                <p>
+                  To embrace the coming of Christmas and New Year, STSPB held a
+                  Christmas Party & Holiday Lighting Ceremony with the theme of
+                  “2022 Christmas at STSP” at Puxin Park on the evening of Dec.
+                  23. At the end of the year, 17 park manufacturers including
+                  TSMC and UMC were invited to put up decoration lights at
+                  important intersections in the park area. The Bureau sincerely
+                  wished every member of the STSP big family a bright and happy
+                  new year, embracing a happy 2023 when everyone can realize
+                  their dreams!
+                </p>
+                <div className="photo_container">
+                  <Image
+                    src={"/images/e/tsdg11/2/en/photo7.png"}
+                    fill={true}
+                    alt="profile photo"
+                  />
+                </div>
               </div>
             </div>
+
+            <div className="photo_row_container"></div>
             <div className="page_description">
-              <h4>愛心不中斷</h4>
+              <h4>Love Never Stops</h4>
               <p>
-                &nbsp;&nbsp;&nbsp;&nbsp;南科管理局自2015年底起攜手南科扶輪社、台灣世界展望會，募集愛心捐款，共同推動「南科愛心月」活動，以「在地關懷，讓愛紮根」為宗旨，匯聚南科人的愛心，為周邊地區弱勢家庭提供急難醫療等協助。迄今所舉辦八屆的愛心月活動，累計募得款項共計約新臺幣1,917萬元。
+                Since 2015, STSPB has worked with Rotary Club Nanke and World
+                Vision Taiwan to raise funds and jointly promote the STSP
+                Charity Month with the purpose of “Care for the Locals, Let Love
+                Grow Roots” to gather love and care at STSP and bring hopes to
+                the disadvantaged for emergency medical care and other needs in
+                the surrounding areas of Tainan and Kaohsiung Science Parks.
+                STSP Charity Month has been implemented for eight years, and the
+                cumulative funds raised so far totaled NTD 19.17 million.
               </p>
               <p>
-                &nbsp;&nbsp;&nbsp;&nbsp;截至2022年底止，計有臺南園區所處之新市、善化、安定三區及高雄園區所在之路竹、岡山、永安三區周邊以及大臺南地區逾1,279戶弱勢家庭、4,089人次受惠，發放愛心捐款金額累計逾1,520萬元。
+                As of the end of 2022, the cumulative funds of NTD 15.20 million
+                have been distributed to 4,089 people from 1,279 disadvantaged
+                households in Xinshi, Shanhua and Anding Districts where Tainan
+                Science Park is located and Luzhu, Gangshan and Yongan Districts
+                where Kaohsiung Science Park is located.
               </p>
             </div>
             <div className="photo_container">
               <Image
-                src={"/images/e/tsdg11/2/zh/photo8.png"}
+                src={"/images/e/tsdg11/2/en/photo8.png"}
                 fill={true}
                 alt="profile photo"
               />
             </div>
             <div className="page_description">
-              <h4>3.同遊史前館</h4>
+              <h4>3.A Visit to Museum of Archaeology</h4>
               <p>
-                &nbsp;&nbsp;&nbsp;&nbsp;國立臺灣史前文化博物館南科考古館(簡稱南科考古館)位於南科管理局行政大樓旁，獨特的建物外觀，蘊藏800多萬件考古文物，均是隨著南科園區開展至今所發掘出的先人遺跡，體現出這片土地蘊涵深厚的人文工藝生活脈絡，舉辦各式活動、推廣教育及特展等，讓大家看見南科與眾不同的當代史前風景，一同來認識並珍惜難得的人文園區。
+                Museum of Archaeology, Tainan Branch (STSP Museum of
+                Archaeology) has an area of 2.44 hectares and is located next to
+                the Administration Building of STSP Bureau. STSP Museum of
+                Archaeology has a unique exterior design, and it contains more
+                than 8 million cultural and archaeological relics, all were
+                unearthed with the development of STSP, reflecting the profound
+                context of craft and cultural life of this land. We organize
+                various activities, promote education and special exhibitions to
+                show the unique contemporary prehistoric scenery of STSP and
+                invite the public to come to know and cherish this rare cultural
+                park area.
               </p>
             </div>
             <div className="photo_container">
               <Image
-                src={"/images/e/tsdg11/2/zh/photo9.png"}
+                src={"/images/e/tsdg11/2/en/photo9.png"}
                 fill={true}
                 alt="profile photo"
               />
