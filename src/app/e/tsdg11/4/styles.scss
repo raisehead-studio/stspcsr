@@ -1,0 +1,19 @@
+.photo_grid {
+  display: flex;
+  justify-content: space-between;
+
+  .container1 {
+    width: 50% !important;
+  }
+
+  .container2 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+
+    .photo_container {
+      padding: 5px 0px !important;
+    }
+  }
+}
