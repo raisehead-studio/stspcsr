@@ -170,30 +170,30 @@
     "sub": [
       {
         "title": "園區廠商專區",
-        "path": "/"
+        "path": "/csr_company_list"
       },
       {
         "title": "永續資料庫",
-        "path": "/"
+        "path": "/sus_data"
       },
       {
         "title": "ESG學習專區",
         "sub": [
           {
             "title": "如何撰寫報告書",
-            "path": "/"
+            "path": "/report_writing"
           },
           {
             "title": "GRI準則2021改版",
-            "path": "/"
+            "path": "/gri"
           },
           {
             "title": "公司治理3.0-永續發展藍圖",
-            "path": "/"
+            "path": "/goverance3.0"
           },
           {
             "title": "上市櫃公司永續發展行動方案",
-            "path": "/"
+            "path": "/plan"
           }
         ]
       }
@@ -211,7 +211,7 @@
         "path": "/report_download"
       },
       {
-        "title": "小遊戲",
+        "title": "小遊戲(維護中)",
         "path": ""
       },
       {

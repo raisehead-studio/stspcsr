@@ -1,6 +1,15 @@
 body {
   margin: 0px;
 }
+.stat {
+  background-image: url("/images/stas.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: -1;
+}
 
 main {
   transform: translateY(134px);

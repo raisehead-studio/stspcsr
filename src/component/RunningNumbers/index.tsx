@@ -5,9 +5,11 @@ export default function RunningNumbers(props: {
   c: string;
   to_fixed: number;
   is_currency: boolean;
-  is_table: boolean;
+  is_table?: boolean;
+  c_ahead?: string;
+  is_trillion?: boolean;
 }) {
-  const { n, c, to_fixed, is_currency, is_table } = props;
+  const { n, c, c_ahead, to_fixed, is_currency, is_table, is_trillion } = props;
   const { number } = useSpring({
     from: { number: 0 },
     number: n,
@@ -27,20 +29,34 @@ export default function RunningNumbers(props: {
         style={{
           display: "flex",
           justifyContent: "center",
-          alignItems: "center",
+          alignItems: "flex-end",
+          padding: "0px",
+          gap: "10px",
         }}>
-        <animated.p style={{ margin: "0px", fontSize: "18px" }}>
+        {c_ahead && <span style={{ fontSize: "12px" }}>{c_ahead}</span>}
+        <animated.p
+          style={{
+            margin: "0px",
+            fontSize: "35px",
+            transform: "translateY(10px)",
+          }}>
           {!is_currency
             ? number.to((n) => n.toFixed(to_fixed))
             : number.to((n) => toCurrency(n.toFixed(to_fixed)))}
         </animated.p>
-        <span>{c}</span>
+        <span style={{ fontSize: "12px" }}>{c}</span>
       </animated.div>
     );
   }
 
   return (
     <animated.div className="data_value">
+      {c_ahead && (
+        <span style={{ transform: "translateX(-5px)" }}>{c_ahead}</span>
+      )}
+      {is_trillion && (
+        <p style={{ fontSize: "33px", padding: "0px 2px" }}>1兆 </p>
+      )}
       <animated.p>
         {!is_currency
           ? number.to((n) => n.toFixed(to_fixed))

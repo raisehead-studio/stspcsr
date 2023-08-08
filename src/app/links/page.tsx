@@ -25,7 +25,7 @@ export default function Links() {
           path: "/report_download",
         },
         {
-          title: "小遊戲",
+          title: "小遊戲(維護中)",
           path: "/",
         },
         {
@@ -49,7 +49,7 @@ export default function Links() {
           path: "/report_download",
         },
         {
-          title: "Game",
+          title: "Game(under maintenance)",
           path: "",
         },
         {
@@ -59,6 +59,74 @@ export default function Links() {
       ],
     },
   ];
+
+  if (lang === "en") {
+    return (
+      <div className="page_layout">
+        <div className="page_content">
+          <div className="page_header">
+            <strong>Good Links</strong>
+            <Breadcrumb />
+          </div>
+          <div className="links_container">
+            {[
+              {
+                title: "Global Reporting Initiative,GRI",
+                path: "https://www.globalreporting.org/",
+              },
+              {
+                title: "UN Sustainable Development Goals (SDGs)",
+                path: "https://www.un.org/sustainabledevelopment/",
+              },
+              {
+                title:
+                  "Organization for Economic Co-operation and Development (OECD)",
+                path: "https://www.oecd.org/",
+              },
+              {
+                title:
+                  "World Business Council For Sustainable Development (WBCSD)",
+                path: "https://www.wbcsd.org/Programs/People-and-Society/Sustainable-Development-Goals/SDG-Sector-Roadmaps/Resources/SDG-Sector-Roadmaps",
+              },
+              {
+                title: "United Nations Environment Programme (UNEP)",
+                path: "https://www.unenvironment.org/",
+              },
+              {
+                title: "International Organization for Standardization (ISO)",
+                path: "https://www.iso.org/home.html",
+              },
+              {
+                title: "Global Corporate Sustainability Awards (GCSA)",
+                path: "https://globalcsaward.org/",
+              },
+              {
+                title:
+                  "Task Force on Climate- Related Financial Disclosure (TCFD)",
+                path: "https://www.fsb-tcfd.org/",
+              },
+              {
+                title: "SASB Standards",
+                path: "https://www.sasb.org/",
+              },
+            ].map((i) => (
+              <Link
+                key={i.title}
+                href={i.path}
+                target="blank_"
+                className="links_container_item">
+                <LinkIcon />
+                {i.title}
+              </Link>
+            ))}
+          </div>
+        </div>
+        <div className="page_sidemenu">
+          <SideMenu menu={menu_zh} />
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="page_layout">

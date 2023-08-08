@@ -152,6 +152,13 @@ export default function Header() {
                                   {subItem.sub.map((subSubItem) => (
                                     <li key={subSubItem.title}>
                                       <Link
+                                        style={
+                                          subItem.title ===
+                                            "Game(under maintenance)" ||
+                                          subItem.title === "小遊戲(維護中)"
+                                            ? { pointerEvents: "none" }
+                                            : {}
+                                        }
                                         href={
                                           lang === "en"
                                             ? {

@@ -4,7 +4,6 @@ import Link from "next/link";
 import { Carousel } from "react-responsive-carousel";
 import Slider from "react-slick";
 import { useSearchParams } from "next/navigation";
-import { useSpring, animated } from "@react-spring/web";
 
 import CardWithMoreEffect from "@/component/CardWithMoreEffect";
 import RunningNumbers from "@/component/RunningNumbers";
@@ -17,13 +16,6 @@ type Props = {};
 export default function Home({}: Props) {
   const searchParams = useSearchParams();
   const lang = searchParams.get("lang");
-  const [props, api] = useSpring(
-    () => ({
-      from: { number: 0 },
-      to: { opacity: 1 },
-    }),
-    []
-  );
 
   if (lang === "en") {
     return (
@@ -72,67 +64,73 @@ export default function Home({}: Props) {
               <p className="year">2022</p>
             </div>
             <div className="data_container data_container1">
-              <div className="data_value">
-                <p>
-                  5,264<span>小時</span>
-                </p>
-              </div>
+              <RunningNumbers
+                n={5264}
+                c={"Hours"}
+                to_fixed={0}
+                is_currency={true}
+              />
               <div className="data_type">
-                <p>在職人員總訓練</p>
+                <p>Serving officers total training</p>
               </div>
             </div>
             <div className="data_container data_container2">
-              <div className="data_value">
-                <p>
-                  44.484<span>萬噸</span>
-                </p>
-              </div>
+              <RunningNumbers
+                n={44.484}
+                c={"Million kWh/year"}
+                to_fixed={3}
+                is_currency={true}
+              />
               <div className="data_type">
-                <p>累計年節水潛量</p>
+                <p>Cumulative water saving potential</p>
               </div>
             </div>
             <div className="data_container data_container3">
-              <div className="data_value">
-                <p>
-                  1<span>兆</span>948<span>億元</span>
-                </p>
-              </div>
+              <RunningNumbers
+                n={1.948}
+                c={"Trillion NT$"}
+                to_fixed={4}
+                is_currency={true}
+              />
               <div className="data_type">
-                <p>總營業額</p>
+                <p>total revenue</p>
               </div>
             </div>
             <div className="data_container data_container4">
-              <div className="data_value">
-                <p>
-                  90.62<span>%</span>
-                </p>
-              </div>
+              <RunningNumbers
+                n={90.62}
+                c={"%"}
+                to_fixed={2}
+                is_currency={true}
+              />
               <div className="data_type">
-                <p>廢棄再利用率</p>
+                <p>Waste recycling rate</p>
               </div>
             </div>
             <div className="data_container data_container5">
-              <div className="data_value">
-                <p>
-                  8,965.2<span>萬度</span>
-                </p>
-              </div>
+              <RunningNumbers
+                n={8965.2}
+                c={"Million kWh/year"}
+                to_fixed={1}
+                is_currency={true}
+              />
               <div className="data_type">
-                <p>累計年節電潛量</p>
+                <p>Cumulative power saving potential</p>
               </div>
             </div>
             <div className="data_container data_container6">
-              <div className="data_value">
-                <p>
-                  1,011<span>場</span>
-                </p>
-              </div>
+              <RunningNumbers
+                n={1011}
+                c={"Field"}
+                to_fixed={0}
+                is_currency={true}
+              />
               <div className="data_type">
-                <p>勞動檢查</p>
+                <p>Labor examination</p>
               </div>
             </div>
             <div className="menu_button">
-              <Link href={"/"}>MORE</Link>
+              <Link href={"/performance"}>MORE</Link>
             </div>
           </div>
         </section>
@@ -150,7 +148,7 @@ export default function Home({}: Props) {
             <iframe
               width="560"
               height="315"
-              src="https://www.facebook.com/stsp543/?ref=embed_page"
+              src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fstsp543%2F&tabs=timeline&width=625&height=365&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen={true}></iframe>
@@ -188,7 +186,7 @@ export default function Home({}: Props) {
         </section>
         <section className="download_section">
           <div className="head">
-            <h2>Report Download</h2>
+            <h2 style={{ textTransform: "none" }}>Report Download</h2>
             <hr />
           </div>
           <div>
@@ -364,76 +362,70 @@ export default function Home({}: Props) {
           </div>
           <div className="data_container data_container1">
             <RunningNumbers
-              n={5264}
-              c={"小時"}
-              to_fixed={0}
+              n={4833.74}
+              c={"億元"}
+              c_ahead="達"
+              to_fixed={2}
               is_currency={true}
+              is_trillion={true}
             />
             <div className="data_type">
-              <p>在職人員總訓練</p>
+              <p>全年營業額</p>
             </div>
           </div>
           <div className="data_container data_container2">
             <RunningNumbers
-              n={44.484}
-              c={"小時"}
-              to_fixed={3}
-              is_currency={false}
+              c_ahead="達"
+              n={272}
+              c={"家"}
+              to_fixed={0}
+              is_currency={true}
             />
             <div className="data_type">
-              <p>累計年節水潛量</p>
+              <p>累計有效核准廠商</p>
             </div>
           </div>
           <div className="data_container data_container3">
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-around",
-                gap: "10px",
-                alignItems: "flex-end",
-              }}>
-              <RunningNumbers n={1} c={"兆"} to_fixed={0} is_currency={false} />
-              <RunningNumbers
-                n={948}
-                c={"億元"}
-                to_fixed={0}
-                is_currency={false}
-              />
-            </div>
+            <RunningNumbers
+              n={951}
+              c={"人次"}
+              to_fixed={0}
+              is_currency={true}
+            />
             <div className="data_type">
-              <p>總營業額</p>
+              <p>國內外訪客到訪南科</p>
             </div>
           </div>
           <div className="data_container data_container4">
-            <RunningNumbers
-              n={90.62}
-              c={"%"}
-              to_fixed={2}
-              is_currency={false}
-            />
+            <RunningNumbers n={93.19} c={"%"} to_fixed={2} is_currency={true} />
             <div className="data_type">
-              <p>廢棄再利用率</p>
+              <p>全園區事業廢棄物再利用率</p>
             </div>
           </div>
           <div className="data_container data_container5">
             <RunningNumbers
-              n={8965.2}
-              c={"萬度"}
-              to_fixed={1}
+              n={4680.8}
+              c={"萬噸"}
+              to_fixed={2}
               is_currency={true}
             />
             <div className="data_type">
-              <p>累計年節電潛量</p>
+              <p>累計節水潛量</p>
             </div>
           </div>
           <div className="data_container data_container6">
-            <RunningNumbers n={1011} c={"場"} to_fixed={0} is_currency={true} />
+            <RunningNumbers
+              n={10536.1}
+              c={"萬噸"}
+              to_fixed={2}
+              is_currency={true}
+            />
             <div className="data_type">
-              <p>勞動檢查</p>
+              <p>累計節電潛量</p>
             </div>
           </div>
           <div className="menu_button">
-            <Link href={"/"}>MORE</Link>
+            <Link href={"/performance"}>MORE</Link>
           </div>
         </div>
       </section>
@@ -462,10 +454,10 @@ export default function Home({}: Props) {
           </div>
           <div>
             <span>-</span>
-            <Link href={"/"}>112年度南科園區廠商節水節能輔導委辦計畫</Link>ㄔ
+            <Link href={"/"}>112年度南科園區廠商節水節能輔導委辦計畫</Link>
           </div>
           <div className="more">
-            <Link href={"/"}>More ...</Link>
+            <Link href={"/performance"}>More ...</Link>
           </div>
         </div>
         <div className="container2">

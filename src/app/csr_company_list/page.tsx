@@ -546,6 +546,45 @@ export default function CSRCompanyListPage() {
     },
   ];
 
+  const menu_zh = [
+    {
+      title: "ESG專區",
+      sub: [
+        {
+          title: "園區廠商專區",
+          path: "/csr_company_list",
+        },
+        {
+          title: "永續資料庫",
+          path: "/sus_data",
+        },
+        {
+          title: "ESG學習專區",
+          sub: [
+            {
+              title: "如何撰寫報告書",
+              path: "/report_writing",
+            },
+            {
+              title: "GRI準則2021改版",
+              path: "/gri",
+            },
+            {
+              title: "公司治理3.0-永續發展藍圖",
+              path: "/goverance3.0",
+            },
+            {
+              title: "上市櫃公司永續發展行動方案",
+              path: "/plan",
+            },
+          ],
+        },
+      ],
+    },
+  ];
+
+  const menu_en = [];
+
   return (
     <div className="page_layout">
       <div className="page_content">
@@ -586,7 +625,9 @@ export default function CSRCompanyListPage() {
                       <td>{item.report_wy_start}</td>
                       <td>{item.spc_nature_type}</td>
                       <td>
-                        <Link href="/">檢視</Link>
+                        <Link href={`/csr_company_list/${item.spc_id}`}>
+                          檢視
+                        </Link>
                       </td>
                     </tr>
                   ))}
@@ -597,7 +638,7 @@ export default function CSRCompanyListPage() {
         </div>
       </div>
       <div className="page_sidemenu">
-        <SideMenu />
+        <SideMenu menu={menu_zh} />
       </div>
     </div>
   );

@@ -72,6 +72,12 @@ export default function SideMenu(props: { menu: any }) {
                         }
                         key={sub_item.title}>
                         <Link
+                          style={
+                            sub_item.title === "Game(under maintenance)" ||
+                            sub_item.title === "小遊戲(維護中)"
+                              ? { pointerEvents: "none" }
+                              : {}
+                          }
                           href={
                             lang === "en"
                               ? {
