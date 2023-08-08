@@ -3,80 +3,128 @@ import Breadcrumb from "@/component/Breadcrumb";
 import SideMenu from "@/component/SideMenu";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
-import Link from "next/link";
 
 import "@/app/layout.scss";
 import "./styles.scss";
 
-export default function CSRCompanyListPage() {
+export default function TSG13() {
   const searchParams = useSearchParams();
   const lang = searchParams.get("lang");
+  const menu_en = [
+    {
+      title:
+        "A Sustainable Environment for Industry, Living, Life, and Ecology",
+      path: "/e",
+      sub: [
+        {
+          title: "T-SDG11",
+          path: "/e/tsdg11",
+          sub: [
+            {
+              title:
+                "Construction of a stable and convenient transportation system",
+              path: "/e/tsdg11/1",
+            },
+            {
+              title:
+                "Complete the park functions to create a LOHAS art and culture in STSP",
+              path: "/e/tsdg11/2",
+            },
+            {
+              title:
+                "Low-carbon ecological communities and buildings for environmental symbiosis and mutual benefit",
+              path: "/e/tsdg11/3",
+            },
+            {
+              title: "Spreading awareness of ecological protection",
+              path: "/e/tsdg11/4",
+            },
+          ],
+        },
+        {
+          title: "T-SDG13",
+          path: "/e/tsdg13",
+          sub: [
+            {
+              title:
+                "Intelligent disaster prevention response system to improve the resilience of the park area",
+              path: "/e/tsdg13/1",
+            },
+            {
+              title: " GHG Management",
+              path: "/e/tsdg13/2",
+            },
+          ],
+        },
+      ],
+    },
+  ];
+
+  const menu_zh = [
+    {
+      title: "營造友善環境，重視四生價值",
+      path: "/e",
+      sub: [
+        {
+          title: "T-SDG11",
+          path: "/e/tsdg11",
+          sub: [
+            {
+              title: "建構穩定且便捷的交通系統",
+              path: "/e/tsdg11/1",
+            },
+            {
+              title: "健全園區機能，樂活藝文南科",
+              path: "/e/tsdg11/2",
+            },
+            {
+              title: "低碳生態社區，建築與環境共生共利",
+              path: "/e/tsdg11/3",
+            },
+            {
+              title: "生態保護意識擴散",
+              path: "/e/tsdg11/4",
+            },
+          ],
+        },
+        {
+          title: "T-SDG13",
+          path: "/e/tsdg13",
+          sub: [
+            {
+              title: "智慧防災應變體系，提高園區韌性",
+              path: "/e/tsdg13/1",
+            },
+            {
+              title: "溫室氣體管理",
+              path: "/e/tsdg13/2",
+            },
+          ],
+        },
+      ],
+    },
+  ];
+
   if (lang) {
     return (
       <div className="page_layout">
         <div className="page_content">
           <div className="page_header">
-            <strong>Introduction to STSP</strong>
+            <strong>T-SDG 13</strong>
             <Breadcrumb />
           </div>
           <div>
-            <div className="page_description">
-              <p>
-                Southern Taiwan Science Park Bureau, National Science and
-                Technology Council is the designated administrative agency
-                located in the Tainan Science Park, Southern Taiwan Science Park
-                in Tainan City, which is affiliated to the National Science and
-                Technology Council. In accordance with the Organizational Act,
-                the STSPB shall have one Director-General, two Deputy
-                Director-Generals, one Chief Secretary, and 10 divisions and
-                offices, including the Investment Services Division, Business
-                Division, Environment & Labor Affairs Division, Construction
-                Management Division, Land Development Division, Planning
-                Division, Secretariat, Personnel Office, Accounting and
-                Statistics Office and Civil Service Ethics Office, and the
-                functions of the divisions and offices cover all the affairs in
-                the science parks.
-              </p>
-            </div>
             <div className="about_stsp_photo_container">
               <Image
-                src={"/images/about_stsp/en/photo1.png"}
+                src={"/images/e/tsdg13/en/photo1.png"}
                 fill={true}
                 alt="profile photo"
               />
-            </div>
-            <div className="link_container">
-              <p>Related link:</p>
-              <Link href="https://www.stsp.gov.tw/web/WEB/Jsp/Page/cindex.jsp?frontTarget=DEFAULT&thisRootID=19">
-                組織職掌
-              </Link>
-            </div>
-            <div className="page_description">
-              <h4>Scale of Budget</h4>
-              <p>
-                As a public agency, the funds needed are for STSPB to promote
-                administrative affairs, perform official duties and maintain
-                park operations. The budgets are from the national treasure and
-                self-fundraising.
-              </p>
-            </div>
-            <div className="about_stsp_photo_container">
-              <Image
-                src={"/images/about_stsp/en/photo2.png"}
-                fill={true}
-                alt="profile photo"
-              />
-            </div>
-            <div className="link_container">
-              <p>Related link:</p>
-              <Link href="https://www.stsp.gov.tw/web/WEB/Jsp/Page/cindex.jsp?frontTarget=DEFAULT&pageID=1570&thisRootID=206&PageNbr=1">
-                STSPB budget, monthly final and accounting reports
-              </Link>
             </div>
           </div>
         </div>
         <div className="page_sidemenu">
-          <SideMenu />
+          <SideMenu menu={menu_en} />
         </div>
       </div>
     );
@@ -86,51 +134,21 @@ export default function CSRCompanyListPage() {
     <div className="page_layout">
       <div className="page_content">
         <div className="page_header">
-          <strong>南科管理局簡介</strong>
+          <strong>T-SDG 13</strong>
           <Breadcrumb />
         </div>
         <div>
-          <div className="page_description">
-            <p>
-              &nbsp;&nbsp;&nbsp;&nbsp;國家科學及技術委員會南部科學園區管理局為設於臺南市南部科學園區臺南園區的南科專責行政機關，隸屬於國家科學及技術委員會，依據組織法下設局長1人、副局長2人、主任秘書1人及投資組、工商組、環安組、營建組、建管組、企劃組、秘書室、人事室、主計室、政風室等10個組室，綜理整個園區事務。
-            </p>
-          </div>
           <div className="about_stsp_photo_container">
             <Image
-              src={"/images/about_stsp/zh/photo1.png"}
+              src={"/images/e/tsdg13/zh/photo1.png"}
               fill={true}
               alt="profile photo"
             />
-          </div>
-          <div className="link_container">
-            <p>相關連結:</p>
-            <Link href="https://www.stsp.gov.tw/web/WEB/Jsp/Page/cindex.jsp?frontTarget=DEFAULT&thisRootID=19">
-              組織職掌
-            </Link>
-          </div>
-          <div className="page_description">
-            <h4>預算規模</h4>
-            <p>
-              &nbsp;&nbsp;&nbsp;&nbsp;南科管理局為公務機關，所需經費主要用於推展政務、執行公務及維持園區營運，預算來源包含國庫負擔及自行籌措。
-            </p>
-          </div>
-          <div className="about_stsp_photo_container">
-            <Image
-              src={"/images/about_stsp/zh/photo2.png"}
-              fill={true}
-              alt="profile photo"
-            />
-          </div>
-          <div className="link_container">
-            <p>相關連結:</p>
-            <Link href="https://www.stsp.gov.tw/web/WEB/Jsp/Page/cindex.jsp?frontTarget=DEFAULT&pageID=1570&thisRootID=206&PageNbr=1">
-              預算、決算及會計月報
-            </Link>
           </div>
         </div>
       </div>
       <div className="page_sidemenu">
-        <SideMenu />
+        <SideMenu menu={menu_zh} />
       </div>
     </div>
   );

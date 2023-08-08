@@ -36,37 +36,38 @@
         "path": "/e",
         "sub": [
           {
-            "title": "T-SG11",
-            "path": "/e/tsg11",
+            "title": "T-SDG11",
+            "path": "/e/tsdg11",
             "sub": [
               {
                 "title": "建構穩定且便捷的交通系統",
-                "path": "/tsg11/1"
+                "path": "/e/tsdg11/1"
               },
               {
                 "title": "健全園區機能，樂活藝文南科",
-                "path": "/tsg11/2"
+                "path": "/e/tsdg11/2"
               },
               {
                 "title": "低碳生態社區，建築與環境共生共利",
-                "path": "/tsg11/3"
+                "path": "/e/tsdg11/3"
               },
               {
                 "title": "生態保護意識擴散",
-                "path": "/tsg11/4"
+                "path": "/e/tsdg11/4"
               }
             ]
           },
           {
-            "title": "T-SG13",
+            "title": "T-SDG13",
+            "path": "/e/tsdg13",
             "sub": [
               {
                 "title": "智慧防災應變體系，提高園區韌性",
-                "path": "/perft-ormance"
+                "path": "/e/tsdg13/1"
               },
               {
                 "title": "溫室氣體管理",
-                "path": "/perft-ormance"
+                "path": "/e/tsdg13/2"
               }
             ]
           }
@@ -74,47 +75,51 @@
       },
       {
         "title": "開創園區動能，壯大產業聚落",
+        "path": "/s",
         "sub": [
           {
             "title": "T-SDG1",
+            "path": "/s/tsdg1",
             "sub": [
               {
                 "title": "協助推動廠商研發創新，扶植新創團隊，積蓄園區技術創新動能",
-                "path": "/perft-ormance"
+                "path": "/s/tsdg1/1"
               },
               {
                 "title": "擴大園區領域，帶動城市轉型，促進地方就業",
-                "path": "/perft-ormance"
+                "path": "/s/tsdg1/2"
               }
             ]
           },
           {
             "title": "T-SDG 4、8",
+            "path": "/s/tsdg4&8",
             "sub": [
               {
                 "title": "關鍵培育，降低產學落差",
-                "path": "/"
+                "path": "/s/tsdg4&8/1"
               },
               {
                 "title": "推動技術升級，壯大產業聚落",
-                "path": "/"
+                "path": "/s/tsdg4&8/2"
               },
               {
                 "title": "建構安全且友善的職場環境",
-                "path": "/"
+                "path": "/s/tsdg4&8/3"
               }
             ]
           },
           {
             "title": "T-SDG17",
+            "path": "/s/tsdg17",
             "sub": [
               {
                 "title": "國內外交流與產業連結",
-                "path": "/"
+                "path": "/s/tsdg17/1"
               },
               {
                 "title": "攜手參與國際大展",
-                "path": "/"
+                "path": "/s/tsdg17/2"
               }
             ]
           }
@@ -122,30 +127,33 @@
       },
       {
         "title": "精實優質服務，確保永續營運",
+        "path": "/g",
         "sub": [
           {
             "title": "T-SDG6、12",
+            "path": "/g/tsdg6&12",
             "sub": [
               {
                 "title": "實施環保審查，廢污水100%納管處理",
-                "path": "/perft-ormance"
+                "path": "/g/tsdg6&12/1"
               },
               {
                 "title": "降低園區用水強度，提升供水穩定",
-                "path": "/perft-ormance"
+                "path": "/g/tsdg6&12/2"
               },
               {
                 "title": "廢棄物妥善處理",
-                "path": "/perft-ormance"
+                "path": "/g/tsdg6&12/3"
               }
             ]
           },
           {
             "title": "T-SDG7",
+            "path": "/g/tsdg7",
             "sub": [
               {
                 "title": "建置再生能源系統，穩定園區供電",
-                "path": "/perft-ormance"
+                "path": "/g/tsdg7/1"
               }
             ]
           }
@@ -153,7 +161,7 @@
       },
       {
         "title": "展望外來",
-        "path": "/"
+        "path": "/future"
       }
     ]
   },
@@ -196,19 +204,19 @@
     "sub": [
       {
         "title": "影音專區",
-        "path": "/"
+        "path": "/video"
       },
       {
         "title": "報告書下載",
-        "path": "/"
+        "path": "/report_download"
       },
       {
         "title": "小遊戲",
-        "path": "/"
+        "path": ""
       },
       {
         "title": "好站相連",
-        "path": "/"
+        "path": "/links"
       }
     ]
   }

@@ -4,8 +4,10 @@ import Link from "next/link";
 import { Carousel } from "react-responsive-carousel";
 import Slider from "react-slick";
 import { useSearchParams } from "next/navigation";
+import { useSpring, animated } from "@react-spring/web";
 
 import CardWithMoreEffect from "@/component/CardWithMoreEffect";
+import RunningNumbers from "@/component/RunningNumbers";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -15,6 +17,13 @@ type Props = {};
 export default function Home({}: Props) {
   const searchParams = useSearchParams();
   const lang = searchParams.get("lang");
+  const [props, api] = useSpring(
+    () => ({
+      from: { number: 0 },
+      to: { opacity: 1 },
+    }),
+    []
+  );
 
   if (lang === "en") {
     return (
@@ -354,61 +363,71 @@ export default function Home({}: Props) {
             <p className="management">永續管理績效</p>
           </div>
           <div className="data_container data_container1">
-            <div className="data_value">
-              <p>
-                5,264<span>小時</span>
-              </p>
-            </div>
+            <RunningNumbers
+              n={5264}
+              c={"小時"}
+              to_fixed={0}
+              is_currency={true}
+            />
             <div className="data_type">
               <p>在職人員總訓練</p>
             </div>
           </div>
           <div className="data_container data_container2">
-            <div className="data_value">
-              <p>
-                44.484<span>萬噸</span>
-              </p>
-            </div>
+            <RunningNumbers
+              n={44.484}
+              c={"小時"}
+              to_fixed={3}
+              is_currency={false}
+            />
             <div className="data_type">
               <p>累計年節水潛量</p>
             </div>
           </div>
           <div className="data_container data_container3">
-            <div className="data_value">
-              <p>
-                1<span>兆</span>948<span>億元</span>
-              </p>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-around",
+                gap: "10px",
+                alignItems: "flex-end",
+              }}>
+              <RunningNumbers n={1} c={"兆"} to_fixed={0} is_currency={false} />
+              <RunningNumbers
+                n={948}
+                c={"億元"}
+                to_fixed={0}
+                is_currency={false}
+              />
             </div>
             <div className="data_type">
               <p>總營業額</p>
             </div>
           </div>
           <div className="data_container data_container4">
-            <div className="data_value">
-              <p>
-                90.62<span>%</span>
-              </p>
-            </div>
+            <RunningNumbers
+              n={90.62}
+              c={"%"}
+              to_fixed={2}
+              is_currency={false}
+            />
             <div className="data_type">
               <p>廢棄再利用率</p>
             </div>
           </div>
           <div className="data_container data_container5">
-            <div className="data_value">
-              <p>
-                8,965.2<span>萬度</span>
-              </p>
-            </div>
+            <RunningNumbers
+              n={8965.2}
+              c={"萬度"}
+              to_fixed={1}
+              is_currency={true}
+            />
             <div className="data_type">
               <p>累計年節電潛量</p>
             </div>
           </div>
           <div className="data_container data_container6">
-            <div className="data_value">
-              <p>
-                1,011<span>場</span>
-              </p>
-            </div>
+            <RunningNumbers n={1011} c={"場"} to_fixed={0} is_currency={true} />
             <div className="data_type">
               <p>勞動檢查</p>
             </div>

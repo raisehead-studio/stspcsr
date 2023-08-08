@@ -3,7 +3,6 @@ import Breadcrumb from "@/component/Breadcrumb";
 import SideMenu from "@/component/SideMenu";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
-import Link from "next/link";
 
 import "../layout.scss";
 import "./styles.scss";
@@ -11,6 +10,52 @@ import "./styles.scss";
 export default function VisionAndBlueprint() {
   const searchParams = useSearchParams();
   const lang = searchParams.get("lang");
+  const menu_en = [
+    {
+      title: "Message from the Director-General",
+      path: "/message_director",
+    },
+    {
+      title: "Introduction to STSP",
+      path: "/about_stsp",
+    },
+    {
+      title: "Vision and Roadmap",
+      path: "/vision_and_blueprint",
+    },
+    {
+      title: "Communication with Stakeholders",
+      path: "/stakeholder_communication",
+    },
+    {
+      title: "2022 Sustainability Management Performance",
+      path: "/performance",
+    },
+  ];
+
+  const menu_zh = [
+    {
+      title: "局長的話",
+      path: "/message_director",
+    },
+    {
+      title: "南科管理局簡介",
+      path: "/about_stsp",
+    },
+    {
+      title: "願景與藍圖",
+      path: "/vision_and_blueprint",
+    },
+    {
+      title: "利害關係人溝通",
+      path: "/stakeholder_communication",
+    },
+    {
+      title: "2022永續管理績效",
+      path: "/performance",
+    },
+  ];
+
   if (lang) {
     return (
       <div className="page_layout">
@@ -97,7 +142,7 @@ export default function VisionAndBlueprint() {
           </div>
         </div>
         <div className="page_sidemenu">
-          <SideMenu />
+          <SideMenu menu={menu_en} />
         </div>
       </div>
     );
@@ -160,7 +205,7 @@ export default function VisionAndBlueprint() {
         </div>
       </div>
       <div className="page_sidemenu">
-        <SideMenu />
+        <SideMenu menu={menu_zh} />
       </div>
     </div>
   );

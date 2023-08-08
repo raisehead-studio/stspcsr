@@ -1,0 +1,224 @@
+[
+  {
+    "title": "Home",
+    "path": "/"
+  },
+  {
+    "title": "STSP",
+    "sub": [
+      {
+        "title": "Message from the Director-General",
+        "path": "/message_director"
+      },
+      {
+        "title": "Introduction to STSP",
+        "path": "/about_stsp"
+      },
+      {
+        "title": "Vision and Roadmap",
+        "path": "/vision_and_blueprint"
+      },
+      {
+        "title": "Communication with Stakeholders",
+        "path": "/stakeholder_communication"
+      },
+      {
+        "title": "2022 Sustainability Management Performance",
+        "path": "/performance"
+      }
+    ]
+  },
+  {
+    "title": "2022 VDR Summary",
+    "sub": [
+      {
+        "title": "A Sustainable Environment for Industry, Living, Life, and Ecology",
+        "path": "/e",
+        "sub": [
+          {
+            "title": "T-SDG11",
+            "path": "/e/tsdg11",
+            "sub": [
+              {
+                "title": "Construction of a stable and convenient transportation system",
+                "path": "/e/tsdg11/1"
+              },
+              {
+                "title": "Complete the park functions to create a LOHAS art and culture in STSP",
+                "path": "/e/tsdg11/2"
+              },
+              {
+                "title": "Low-carbon ecological communities and buildings for environmental symbiosis and mutual benefit",
+                "path": "/e/tsdg11/3"
+              },
+              {
+                "title": "Spreading awareness of ecological protection",
+                "path": "/e/tsdg11/4"
+              }
+            ]
+          },
+          {
+            "title": "T-SDG13",
+            "path": "/e/tsdg13",
+            "sub": [
+              {
+                "title": "Intelligent disaster prevention response system to improve the resilience of the park area",
+                "path": "/e/tsdg13/1"
+              },
+              {
+                "title": " GHG Management",
+                "path": "/e/tsdg13/2"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Stabilizing STSP Resources for Sustainable Operations",
+        "path": "/s",
+        "sub": [
+          {
+            "title": "T-SDG1",
+            "path": "/s/tsdg1",
+            "sub": [
+              {
+                "title": "Assist manufacturers with R&D and innovation, foster startup teams, and accumulate the momentum for technical innovation in the park",
+                "path": "/s/tsdg1/1"
+              },
+              {
+                "title": "Expansion of the Park Area, Driving Urban Transformation, and Promoting Local Employment",
+                "path": "/s/tsdg1/2"
+              }
+            ]
+          },
+          {
+            "title": "T-SDG 4、8",
+            "path": "/s/tsdg4&8",
+            "sub": [
+              {
+                "title": "Key cultivation to reduce the gap between the industry and the academia",
+                "path": "/s/tsdg4&8/1"
+              },
+              {
+                "title": "Promote Technological Upgrading and Expand Industrial Clusters",
+                "path": "/s/tsdg4&8/2"
+              },
+              {
+                "title": "Construction of a Safe and Friendly Workplace Environment",
+                "path": "/s/tsdg4&8/3"
+              }
+            ]
+          },
+          {
+            "title": "T-SDG17",
+            "path": "/s/tsdg17",
+            "sub": [
+              {
+                "title": "Implementation content and promotion results",
+                "path": "/s/tsdg17/1"
+              },
+              {
+                "title": "Joint Participation in International Exhibitions",
+                "path": "/s/tsdg17/2"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "A Sustainable Environment for Industry, Living, Life, and Ecology",
+        "path": "/g",
+        "sub": [
+          {
+            "title": "T-SDG6、12",
+            "path": "/g/tsdg6&12",
+            "sub": [
+              {
+                "title": "Implement environmental reviews and 100% of wastewater and sewage is included in sewage pipeline",
+                "path": "/g/tsdg6&12/1"
+              },
+              {
+                "title": "Reduce water intensity in the park and improve stability of water supply",
+
+                "path": "/g/tsdg6&12/2"
+              },
+              {
+                "title": "Proper Treatment of Waste",
+                "path": "/g/tsdg6&12/3"
+              }
+            ]
+          },
+          {
+            "title": "T-SDG7",
+            "path": "/g/tsdg7",
+            "sub": [
+              {
+                "title": "Installation of Renewable Energy Systems to stabilize power supply in the park",
+                "path": "/g/tsdg7/1"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Future Outlook",
+        "path": "/future"
+      }
+    ]
+  },
+  {
+    "title": "CSR Learning",
+    "sub": [
+      {
+        "title": "園區廠商專區",
+        "path": "/"
+      },
+      {
+        "title": "永續資料庫",
+        "path": "/"
+      },
+      {
+        "title": "ESG學習專區",
+        "sub": [
+          {
+            "title": "如何撰寫報告書",
+            "path": "/"
+          },
+          {
+            "title": "GRI準則2021改版",
+            "path": "/"
+          },
+          {
+            "title": "公司治理3.0-永續發展藍圖",
+            "path": "/"
+          },
+          {
+            "title": "上市櫃公司永續發展行動方案",
+            "path": "/"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Interactive",
+    "sub": [
+      {
+        "title": "Video",
+        "path": "/video"
+      },
+      {
+        "title": "Report Download",
+        "path": "/report_download"
+      },
+      {
+        "title": "Game",
+        "path": ""
+      },
+      {
+        "title": "Good Links",
+        "path": "/links"
+      }
+    ]
+  }
+]

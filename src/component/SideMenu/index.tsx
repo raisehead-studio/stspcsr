@@ -1,12 +1,19 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect, use } from "react";
 import Link from "next/link";
 import Collapse from "@mui/material/Collapse";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+
+import { usePathname, useSearchParams } from "next/navigation";
 
 import "./style.scss";
 
-export default function SideMenu() {
+export default function SideMenu(props: { menu: any }) {
+  const { menu } = props;
+  const searchParams = useSearchParams();
+  const lang = searchParams.get("lang");
+  const pathname = usePathname();
   const [openMenu, setOpenMenu] = useState<string>("");
 
   const handleToggleMenu = (menuName: string) => {
@@ -17,33 +24,121 @@ export default function SideMenu() {
     }
   };
 
+  useEffect(() => {
+    const path = pathname.split("/");
+    if (path.length === 4) {
+      setOpenMenu(`/${path[1]}/${path[2]}`);
+    }
+  }, [pathname]);
+
   return (
     <div className="side_menu">
-      <div className="side_menu_item active">
-        <Link href="/">園區廠商csr專區</Link>
-      </div>
-      <div className="side_menu_item">
-        <Link href="/">永續資料庫</Link>
-      </div>
-      <div
-        className="side_menu_item is_sub_menu"
-        onClick={() => handleToggleMenu("csr_sub")}>
-        <Link href="/">CSR導入學習區</Link>
-        <KeyboardArrowDownIcon />
-      </div>
-      <Collapse in={openMenu === "csr_sub"}>
-        <>
-          <div className="sub_side_menu_item">
-            <Link href="/">如何撰寫CSR報告書</Link>
-          </div>
-          <div className="sub_side_menu_item">
-            <Link href="/">GRI改版資訊</Link>
-          </div>
-          <div className="sub_side_menu_item">
-            <Link href="/">「公司治理3.0-永續發展藍圖」資訊</Link>
-          </div>
-        </>
-      </Collapse>
+      {menu.map((item: any, index: number) => {
+        return (
+          <>
+            <div
+              className={
+                item.path === pathname
+                  ? "side_menu_item is_sub_menu active"
+                  : "side_menu_item is_sub_menu"
+              }
+              key={item.title}>
+              <Link
+                href={
+                  lang === "en"
+                    ? {
+                        pathname: item.path,
+                        query: {
+                          lang: "en",
+                        },
+                      }
+                    : {
+                        pathname: item.path,
+                      }
+                }>
+                {item.title}
+              </Link>
+            </div>
+            {item.sub !== undefined && (
+              <Collapse in={true}>
+                <>
+                  {item.sub.map((sub_item: any) => (
+                    <>
+                      <div
+                        className={
+                          sub_item.path === pathname
+                            ? "sub_side_menu_item active"
+                            : "sub_side_menu_item"
+                        }
+                        key={sub_item.title}>
+                        <Link
+                          href={
+                            lang === "en"
+                              ? {
+                                  pathname: sub_item.path,
+                                  query: {
+                                    lang: "en",
+                                  },
+                                }
+                              : {
+                                  pathname: sub_item.path,
+                                }
+                          }>
+                          {sub_item.title}
+                        </Link>
+                        {sub_item.sub ? (
+                          <>
+                            {openMenu === sub_item.path ? (
+                              <KeyboardArrowDownIcon
+                                onClick={() => handleToggleMenu(sub_item.path)}
+                              />
+                            ) : (
+                              <KeyboardArrowUpIcon
+                                onClick={() => handleToggleMenu(sub_item.path)}
+                              />
+                            )}
+                          </>
+                        ) : null}
+                      </div>
+                      {sub_item.sub && (
+                        <Collapse in={openMenu === sub_item.path}>
+                          <>
+                            {sub_item.sub.map((sub_item: any) => (
+                              <div
+                                className={
+                                  sub_item.path === pathname
+                                    ? "sub_side_menu_item third_layer active"
+                                    : "sub_side_menu_item third_layer"
+                                }
+                                key={sub_item.title}>
+                                <Link
+                                  href={
+                                    lang === "en"
+                                      ? {
+                                          pathname: sub_item.path,
+                                          query: {
+                                            lang: "en",
+                                          },
+                                        }
+                                      : {
+                                          pathname: sub_item.path,
+                                        }
+                                  }>
+                                  {sub_item.title}
+                                </Link>
+                              </div>
+                            ))}
+                          </>
+                        </Collapse>
+                      )}
+                    </>
+                  ))}
+                </>
+              </Collapse>
+            )}
+          </>
+        );
+      })}
     </div>
   );
 }

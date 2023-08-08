@@ -2,8 +2,8 @@
 import Breadcrumb from "@/component/Breadcrumb";
 import SideMenu from "@/component/SideMenu";
 import { useSearchParams } from "next/navigation";
-import Image from "next/image";
-import Link from "next/link";
+
+import RunningNumbers from "@/component/RunningNumbers";
 
 import "../layout.scss";
 import "./styles.scss";
@@ -11,6 +11,52 @@ import "./styles.scss";
 export default function Performance() {
   const searchParams = useSearchParams();
   const lang = searchParams.get("lang");
+  const menu_en = [
+    {
+      title: "Message from the Director-General",
+      path: "/message_director",
+    },
+    {
+      title: "Introduction to STSP",
+      path: "/about_stsp",
+    },
+    {
+      title: "Vision and Roadmap",
+      path: "/vision_and_blueprint",
+    },
+    {
+      title: "Communication with Stakeholders",
+      path: "/stakeholder_communication",
+    },
+    {
+      title: "2022 Sustainability Management Performance",
+      path: "/performance",
+    },
+  ];
+
+  const menu_zh = [
+    {
+      title: "局長的話",
+      path: "/message_director",
+    },
+    {
+      title: "南科管理局簡介",
+      path: "/about_stsp",
+    },
+    {
+      title: "願景與藍圖",
+      path: "/vision_and_blueprint",
+    },
+    {
+      title: "利害關係人溝通",
+      path: "/stakeholder_communication",
+    },
+    {
+      title: "2022永續管理績效",
+      path: "/performance",
+    },
+  ];
+
   if (lang) {
     return (
       <div className="page_layout">
@@ -27,7 +73,14 @@ export default function Performance() {
                     <strong>Environment</strong>
                   </td>
                   <td>
-                    93.19% <br />
+                    <RunningNumbers
+                      n={93.19}
+                      c={"%"}
+                      to_fixed={2}
+                      is_currency={false}
+                      is_table={true}
+                    />{" "}
+                    <br />
                     <span>
                       The reuse rate of the industrial waste in the science park
                     </span>
@@ -146,7 +199,7 @@ export default function Performance() {
           </div>
         </div>
         <div className="page_sidemenu">
-          <SideMenu />
+          <SideMenu menu={menu_en} />
         </div>
       </div>
     );
@@ -167,7 +220,13 @@ export default function Performance() {
                   <strong>Environment</strong>
                 </td>
                 <td>
-                  93.19% <br />
+                  <RunningNumbers
+                    n={93.19}
+                    c={"%"}
+                    to_fixed={2}
+                    is_currency={false}
+                    is_table={true}
+                  />
                   <span>全園區事業廢棄物再利用率</span>
                 </td>
                 <td>
@@ -186,7 +245,21 @@ export default function Performance() {
                   達4.29 MW <br /> <span>裝設太陽能發電系統</span>
                 </td>
                 <td>
-                  14場次，405人次參與 <br /> <span>辦理環境教育課程</span>
+                  <RunningNumbers
+                    n={14}
+                    c={"場次, "}
+                    to_fixed={0}
+                    is_currency={false}
+                    is_table={true}
+                  />
+                  <RunningNumbers
+                    n={405}
+                    c={"人次參與"}
+                    to_fixed={0}
+                    is_currency={false}
+                    is_table={true}
+                  />
+                  <br /> <span>辦理環境教育課程</span>
                 </td>
               </tr>
               <tr>
@@ -284,7 +357,7 @@ export default function Performance() {
         </div>
       </div>
       <div className="page_sidemenu">
-        <SideMenu />
+        <SideMenu menu={menu_zh} />
       </div>
     </div>
   );

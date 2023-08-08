@@ -1,13 +1,19 @@
-.about_stsp_photo_container {
-  padding: 20px 0px 50px 0px;
-  max-width: 1280px;
-  width: 100%;
-  border-radius: 50%;
-  border: 2px solid #fff;
+.photo_grid {
+  display: flex;
+  justify-content: space-between;
 
-  > img {
-    width: 100%;
-    object-fit: contain;
-    position: inherit !important;
+  .container1 {
+    width: 50% !important;
+  }
+
+  .container2 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+
+    .photo_container {
+      padding: 5px 0px !important;
+    }
   }
 }

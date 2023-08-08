@@ -1,160 +1,95 @@
 "use client";
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { ChevronRight } from "react-bootstrap-icons";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+import Collapse from "@mui/material/Collapse";
 
-import menu_zh from "../../app/data/menu_zh.json";
-import menu_en from "../../app/data/menu_en.json";
+import menu_zh from "@/data/menu_zh.json";
+import menu_en from "@/data/menu_en.json";
 
 import "./styles.scss";
 
 export default function Header() {
+  const [openItem, setOpenItem] = useState<string>("");
   const searchParams = useSearchParams();
   const lang = searchParams.get("lang");
 
-  if (lang === "en") {
-    return (
-      <header className="header">
-        <div className="top_bar">
-          <div className="top_bar_menu_container">
-            <ul>
-              <li>
-                <a href="/">Home</a>
-              </li>
-              <li>
-                <a href="/">Survey</a>
-              </li>
-              <li>
-                <a href="/">FB</a>
-              </li>
-              <li>
-                <a href="/">Sitemap</a>
-              </li>
-              <li>
-                <Link href={{ pathname: "/" }}>中文</Link>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="navbar">
-          <div>
-            <a>
-              <Image
-                src="/images/home/en/logo.png"
-                alt="logo"
-                width={253}
-                height={73.42}
-              />
-            </a>
-          </div>
-          <div className="menu">
-            <ul>
-              {menu_en.map((item) => {
-                if (item.sub) {
-                  return (
-                    <li className="dropdown" key={item.title}>
-                      <label>{item.title}</label>
-                      <ul className="dropdown-content">
-                        {item.sub.map((subItem) => {
-                          if (subItem.sub) {
-                            return (
-                              <li key={subItem.title}>
-                                <label>{subItem.title}</label>
-                                <ChevronRight />
-                                <ul className="right_drop_content">
-                                  {subItem.sub.map((subSubItem) => {
-                                    let path;
-                                    if ("path" in subSubItem) {
-                                      path = subSubItem.path;
-                                    } else {
-                                      path = subSubItem.sub[0].path;
-                                    }
-                                    return (
-                                      <li key={subSubItem.title}>
-                                        <Link
-                                          href={
-                                            lang
-                                              ? {
-                                                  pathname: path,
-                                                  query: { lang: "en" },
-                                                }
-                                              : { pathname: path }
-                                          }>
-                                          {subSubItem.title}
-                                        </Link>
-                                      </li>
-                                    );
-                                  })}
-                                </ul>
-                              </li>
-                            );
-                          } else {
-                            return (
-                              <li key={subItem.title}>
-                                <Link
-                                  href={
-                                    lang
-                                      ? {
-                                          pathname: subItem.path,
-                                          query: { lang: "en" },
-                                        }
-                                      : { pathname: subItem.path }
-                                  }>
-                                  {subItem.title}
-                                </Link>
-                              </li>
-                            );
-                          }
-                        })}
-                      </ul>
-                    </li>
-                  );
-                } else {
-                  return (
-                    <li className="dropdown" key={item.title}>
-                      <Link
-                        href={
-                          lang
-                            ? {
-                                pathname: item.path,
-                                query: { lang: "en" },
-                              }
-                            : { pathname: item.path }
-                        }>
-                        {item.title}
-                      </Link>
-                    </li>
-                  );
-                }
-              })}
-            </ul>
-          </div>
-        </div>
-      </header>
-    );
-  }
+  const handleSetOPenItem = (item: string) => {
+    setOpenItem(item);
+  };
 
   return (
     <header className="header">
       <div className="top_bar">
         <div className="top_bar_menu_container">
           <ul>
-            <li>
-              <a href="/">首頁</a>
-            </li>
-            <li>
-              <a href="/">問卷</a>
-            </li>
-            <li>
-              <a href="/">FB</a>
-            </li>
-            <li>
-              <a href="/">網站地圖</a>
-            </li>
-            <li>
-              <Link href={{ pathname: "/", query: { lang: "en" } }}>EN</Link>
-            </li>
+            {(lang === "en"
+              ? [
+                  {
+                    title: "Home",
+                    path: { pathname: "/", query: { lang: "en" } },
+                    isOpenNewTab: false,
+                  },
+                  {
+                    title: "Survey",
+                    path: "https://forms.gle/kvTyN4R5wKAwxanX7",
+                    isOpenNewTab: true,
+                  },
+                  {
+                    title: "FB",
+                    path: "https://www.facebook.com/stsp543/?ref=ts&fref=ts",
+                    isOpenNewTab: true,
+                  },
+                  {
+                    title: "Site Map",
+                    path: { pathname: "/sitemap", query: { lang: "en" } },
+                    isOpenNewTab: false,
+                  },
+                  {
+                    title: "中文",
+                    path: "/",
+                    isOpenNewTab: false,
+                  },
+                ]
+              : [
+                  {
+                    title: "首頁",
+                    path: { pathname: "/", query: { lang: "en" } },
+                    isOpenNewTab: false,
+                  },
+                  {
+                    title: "問卷",
+                    path: "https://forms.gle/kvTyN4R5wKAwxanX7",
+                    isOpenNewTab: true,
+                  },
+                  {
+                    title: "FB",
+                    path: "https://www.facebook.com/stsp543/?ref=ts&fref=ts",
+                    isOpenNewTab: true,
+                  },
+                  {
+                    title: "網站地圖",
+                    path: { pathname: "/sitemap", query: { lang: "en" } },
+                    isOpenNewTab: false,
+                  },
+                  {
+                    title: "EN",
+                    path: { pathname: "/", query: { lang: "en" } },
+                    isOpenNewTab: false,
+                  },
+                ]
+            ).map((item) => (
+              <li key={item.title}>
+                <Link
+                  target={item.isOpenNewTab ? "_blank" : ""}
+                  href={item.path}>
+                  {item.title}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
@@ -162,7 +97,11 @@ export default function Header() {
         <div>
           <a>
             <Image
-              src="/images/home/zh/logo.png"
+              src={
+                lang === "en"
+                  ? "/images/home/en/logo.png"
+                  : "/images/home/zh/logo.png"
+              }
               alt="logo"
               width={253}
               height={73.42}
@@ -171,7 +110,7 @@ export default function Header() {
         </div>
         <div className="menu">
           <ul>
-            {menu_zh.map((item) => {
+            {(lang === "en" ? menu_en : menu_zh).map((item) => {
               if (item.sub) {
                 return (
                   <li className="dropdown" key={item.title}>
@@ -180,34 +119,57 @@ export default function Header() {
                       {item.sub.map((subItem) => {
                         if (subItem.sub) {
                           return (
-                            <li key={subItem.title}>
-                              <label>{subItem.title}</label>
-                              <ChevronRight />
-                              <ul className="right_drop_content">
-                                {subItem.sub.map((subSubItem) => {
-                                  let path;
-                                  if ("path" in subSubItem) {
-                                    path = subSubItem.path;
-                                  } else {
-                                    path = subSubItem.sub[0].path;
-                                  }
-                                  return (
+                            <li
+                              className="third_sub_menu"
+                              key={subItem.title}
+                              onMouseEnter={() =>
+                                handleSetOPenItem(subItem.title)
+                              }
+                              onMouseLeave={() => handleSetOPenItem("")}>
+                              <Link
+                                href={
+                                  lang === "en"
+                                    ? {
+                                        pathname: subItem.path,
+                                        query: {
+                                          lang: "en",
+                                        },
+                                      }
+                                    : {
+                                        pathname: subItem.path,
+                                      }
+                                }>
+                                {subItem.title}
+                                {openItem === subItem.title ? (
+                                  <KeyboardArrowDownIcon />
+                                ) : (
+                                  <KeyboardArrowUpIcon />
+                                )}
+                              </Link>
+
+                              <Collapse in={openItem === subItem.title}>
+                                <ul className="third_sub_menu_item">
+                                  {subItem.sub.map((subSubItem) => (
                                     <li key={subSubItem.title}>
                                       <Link
                                         href={
-                                          lang
+                                          lang === "en"
                                             ? {
-                                                pathname: path,
-                                                query: { lang: "en" },
+                                                pathname: subSubItem.path,
+                                                query: {
+                                                  lang: "en",
+                                                },
                                               }
-                                            : { pathname: path }
+                                            : {
+                                                pathname: subSubItem.path,
+                                              }
                                         }>
                                         {subSubItem.title}
                                       </Link>
                                     </li>
-                                  );
-                                })}
-                              </ul>
+                                  ))}
+                                </ul>
+                              </Collapse>
                             </li>
                           );
                         } else {
@@ -215,12 +177,16 @@ export default function Header() {
                             <li key={subItem.title}>
                               <Link
                                 href={
-                                  lang
+                                  lang === "en"
                                     ? {
                                         pathname: subItem.path,
-                                        query: { lang: "en" },
+                                        query: {
+                                          lang: "en",
+                                        },
                                       }
-                                    : { pathname: subItem.path }
+                                    : {
+                                        pathname: subItem.path,
+                                      }
                                 }>
                                 {subItem.title}
                               </Link>
@@ -236,7 +202,7 @@ export default function Header() {
                   <li className="dropdown" key={item.title}>
                     <Link
                       href={
-                        lang
+                        lang === "en"
                           ? {
                               pathname: item.path,
                               query: { lang: "en" },

@@ -62,17 +62,22 @@ main {
         align-items: center;
         gap: 10px;
         .data_value {
+          display: flex;
+          justify-content: space-around;
+          align-items: flex-end;
           > p {
             font-size: 35px;
             color: #024fa1;
             font-weight: 700;
             margin: 0px;
-            > span {
-              color: #555;
-              text-align: center;
-              font-size: 13px;
-              margin: 0px 0px 0px 5px;
-            }
+            transform: translateY(7px);
+          }
+
+          > span {
+            color: #555;
+            text-align: center;
+            font-size: 13px;
+            margin: 0px 0px 0px 10px;
           }
         }
 
@@ -288,8 +293,8 @@ main {
   max-width: 1280px;
   margin: 20px auto 50px auto;
   display: grid;
-  grid-template-columns: 1fr 20%;
-  gap: 30px;
+  grid-template-columns: 1fr 28%;
+  gap: 35px;
 
   .page_content {
     .page_header {
@@ -304,6 +309,7 @@ main {
         font-weight: 700;
         color: #555;
         font-size: 26px;
+        max-width: 450px;
       }
     }
     .page_description {
