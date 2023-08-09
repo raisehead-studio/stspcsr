@@ -170,30 +170,18 @@
     "title": "CSR Learning",
     "sub": [
       {
-        "title": "園區廠商專區",
-        "path": "/"
-      },
-      {
-        "title": "永續資料庫",
-        "path": "/"
-      },
-      {
-        "title": "ESG學習專區",
+        "title": "ESG Learning",
         "sub": [
           {
             "title": "如何撰寫報告書",
             "path": "/"
           },
           {
-            "title": "GRI準則2021改版",
+            "title": "GRI 2021",
             "path": "/"
           },
           {
-            "title": "公司治理3.0-永續發展藍圖",
-            "path": "/"
-          },
-          {
-            "title": "上市櫃公司永續發展行動方案",
+            "title": "Governance 3.0 Blueprint",
             "path": "/"
           }
         ]

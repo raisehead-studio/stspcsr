@@ -57,7 +57,7 @@ export default function Header() {
               : [
                   {
                     title: "首頁",
-                    path: { pathname: "/", query: { lang: "en" } },
+                    path: { pathname: "/" },
                     isOpenNewTab: false,
                   },
                   {
@@ -72,7 +72,7 @@ export default function Header() {
                   },
                   {
                     title: "網站地圖",
-                    path: { pathname: "/sitemap", query: { lang: "en" } },
+                    path: { pathname: "/sitemap" },
                     isOpenNewTab: false,
                   },
                   {

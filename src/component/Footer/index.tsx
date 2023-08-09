@@ -167,16 +167,33 @@ export default function Header() {
       <div className="container4">
         <ul>
           <li>
-            <Link href={"/"}>電子報</Link>
+            <Link
+              href={
+                "https://www.stsp.gov.tw/web/WEB/Jsp/Page/cindex.jsp?frontTarget=DEFAULT&thisRootID=85"
+              }>
+              電子報
+            </Link>
           </li>
           <li>
-            <Link href={"/"}>南科543</Link>
+            <Link href={"/https://www.facebook.com/stsp543/?ref=ts&fref=ts"}>
+              南科543
+            </Link>
           </li>
           <li>
-            <Link href={"/"}>意見回饋</Link>
+            <Link
+              href={
+                "/https://www.stsp.gov.tw/feedback/?opg=Y&frontTarget=DEFAUL"
+              }>
+              意見回饋
+            </Link>
           </li>
           <li>
-            <Link href={"/"}>南科管理局</Link>
+            <Link
+              href={
+                "/https://www.stsp.gov.tw/web/indexGroups?frontTarget=DEFAULT"
+              }>
+              南科管理局
+            </Link>
           </li>
         </ul>
       </div>
