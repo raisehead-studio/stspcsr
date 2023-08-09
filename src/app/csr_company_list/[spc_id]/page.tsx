@@ -1,10 +1,10 @@
 "use client";
 import Image from "next/image";
-
+import { Suspense } from "react";
 import Breadcrumb from "@/component/Breadcrumb";
 import SideMenu from "@/component/SideMenu";
 
-import csr from "@/data/csr.json";
+import csr from "../../../../data/csr.json";
 
 import "@/app/layout.scss";
 import "../style.scss";
@@ -20,6 +20,15 @@ export default async function Page({ params }: { params: { spc_id: string } }) {
   const { spc_id } = params;
   const data = await getData({ spc_id });
 
+  return (
+    <Suspense fallback={<div></div>}>
+      <Detail data={data} />
+    </Suspense>
+  );
+}
+
+function Detail(props: { data: any }) {
+  const { data } = props;
   return (
     <div className="page_layout">
       <div className="page_content">
