@@ -28,11 +28,11 @@ export default function Sitemap() {
               <div key={i.title}>
                 <h3>{i.title}</h3>
                 <ul>
-                  {i.sub?.map((j) => (
+                  {i.sub?.map((j: any) => (
                     <li key={j.title}>
                       <Link href={j.path || ""}>{j.title}</Link>
                       <ul>
-                        {j.sub?.map((k) => {
+                        {j.sub?.map((k: any) => {
                           if (!k.title) {
                             return;
                           }

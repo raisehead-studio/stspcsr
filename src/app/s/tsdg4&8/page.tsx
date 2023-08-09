@@ -29,7 +29,7 @@ export default function TSGD4and8() {
           </div>
         </div>
         <div className="page_sidemenu">
-          <SideMenu />
+          <SideMenu menu={[]} />
         </div>
       </div>
     );
@@ -53,7 +53,7 @@ export default function TSGD4and8() {
         </div>
       </div>
       <div className="page_sidemenu">
-        <SideMenu />
+        <SideMenu menu={[]} />
       </div>
     </div>
   );

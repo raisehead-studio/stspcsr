@@ -43,7 +43,7 @@ export default function G() {
           </div>
         </div>
         <div className="page_sidemenu">
-          <SideMenu />
+          <SideMenu menu={[]} />
         </div>
       </div>
     );
@@ -66,7 +66,7 @@ export default function G() {
         </div>
       </div>
       <div className="page_sidemenu">
-        <SideMenu />
+        <SideMenu menu={[]} />
       </div>
     </div>
   );

@@ -116,7 +116,7 @@ export default function Header() {
                   <li className="dropdown" key={item.title}>
                     <label>{item.title}</label>
                     <ul className="dropdown-content">
-                      {item.sub.map((subItem) => {
+                      {item.sub.map((subItem: any) => {
                         if (subItem.sub) {
                           return (
                             <li
@@ -149,7 +149,7 @@ export default function Header() {
 
                               <Collapse in={openItem === subItem.title}>
                                 <ul className="third_sub_menu_item">
-                                  {subItem.sub.map((subSubItem) => (
+                                  {subItem.sub.map((subSubItem: any) => (
                                     <li key={subSubItem.title}>
                                       <Link
                                         style={

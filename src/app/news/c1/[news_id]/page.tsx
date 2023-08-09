@@ -3,7 +3,7 @@ import news from "@/data/news.json";
 import Breadcrumb from "@/component/Breadcrumb";
 
 import "@/app/layout.scss";
-import "../style.scss";
+import "../../style.scss";
 
 async function getData(props: { news_id: string }) {
   const { news_id } = props;
