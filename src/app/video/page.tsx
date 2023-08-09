@@ -1,10 +1,8 @@
 "use client";
 import { useState } from "react";
 import { useSearchParams } from "next/navigation";
-import Link from "next/link";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
-import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { styled } from "@mui/material/styles";
 
@@ -36,7 +34,7 @@ export default function Video() {
   const lang = searchParams.get("lang");
   const [value, setValue] = useState(0);
 
-  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+  const handleChange = (_: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
   };
 

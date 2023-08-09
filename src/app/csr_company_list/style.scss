@@ -53,3 +53,12 @@
     }
   }
 }
+
+.detail_content_table {
+  .image_container {
+    width: 100%;
+    > img {
+      position: inherit !important;
+    }
+  }
+}
